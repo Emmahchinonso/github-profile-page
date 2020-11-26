@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="github-brands.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Emmahchinonso (EmmahNcodes)</title>
+	</head>
+	<body>
+		<header class="header">
+			<a class="header__logo">
+				<i class="fab fa-github"></i>
+			</a>
+			<div class="header__group">
+				<form class="search-form">
+					<input type="text" placeholder="Search or jump to..." class="input" />
+					<img
+						src="https://github.githubassets.com/images/search-key-slash.svg"
+						alt="search-key-slash"
+						class="search-form__slash"
+					/>
+				</form>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link">Pull requests</a>
+						</li>
+						<li class="nav__item"><a href="#" class="nav__link">Issues</a></li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Marketplace</a>
+						</li>
+						<li class="nav__item"><a href="#" class="nav__link">Explore</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<a href="#" class="header__link header__link--notifications">
+				<i class="far fa-bell"></i>
+			</a>
+			<button class="header__btn header__btn--light">
+				<span>+</span>
+				<i class="fas fa-caret-down"></i>
+			</button>
+			<button class="header__btn">
+				<img src="" alt="chinonso" class="header__profile js-profile-btn" />
+				<i class="fas fa-caret-down"></i>
+			</button>
+			<button class="header__btn header__btn--hidden">
+				<i class="fas fa-bars"></i>
+			</button>
+		</header>
+		<main>
+			<div class="tab-container">
+				<div class="tab-element"></div>
+				<div class="tab-wrapper">
+					<ul class="tab">
+						<li class="tab__item">
+							<a href="#" class="tab__link"
+								><i class="fas fa-book-open"></i>Overview</a
+							>
+						</li>
+						<li class="tab__item tab__item--active">
+							<a href="#" class="tab__link">
+								<i class="fas fa-book"></i>
+                Repositories
+								<span class="js-repo-count repo-count--round"></span>
+							</a>
+						</li>
+						<li class="tab__item">
+							<a href="#" class="tab__link"
+								><i class="fas fa-folder"></i>Projects</a
+							>
+						</li>
+						<li class="tab__item">
+							<a href="#" class="tab__link"
+								><i class="fas fa-cube"></i>Packages</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="flex-container">
+				<div class="flex-column flex-column--1 js-flex-column-1"></div>
+				<div class="flex-column flex-column--3">
+					<div class="tab-container tab-container--mobile">
+						<div class="tab-element"></div>
+						<div class="tab-wrapper">
+							<ul class="tab">
+								<li class="tab__item">
+									<a href="#" class="tab__link"
+										><i class="fas fa-book-open"></i>Overview</a
+									>
+								</li>
+								<li class="tab__item tab__item--active">
+									<a href="#" class="tab__link">
+										<i class="fas fa-book"></i>Repositories
+									</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">
+										<i class="fas fa-folder"></i>Projects
+									</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link"
+										><i class="fas fa-cube"></i>Packages</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-container">
+						<form>
+							<input
+								placeholder="find a repository..."
+								class="input input--repo"
+							/>
+						</form>
+					</div>
+					<p class="result-summary"> 
+						<span class="js-repo-count bold"></span>results for
+						<span class="bold">public</span>repositories
+					</p>
+					<ul class="list-wrapper js-repo-container"></ul>
+				</div>
+			</div>
+		</main>
+
+		<script
+			src="https://kit.fontawesome.com/e2335626de.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/query.js" type="module"></script>
+		<script src="js/index.js" type="module"></script>
+	</body>
+</html>
