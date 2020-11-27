@@ -282,6 +282,7 @@ button {
 @media (max-width: 768px) {
 	.flex-container {
 		flex-direction: column;
+    padding: 0 1rem;
 	}
 
   .flex-column{
@@ -379,6 +380,28 @@ button {
   .profile__login{
     font-size: 1.3rem;
   }
+
+  .profile__status{
+    display: none;
+  }
+
+  .user__status{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border-light);
+    text-align: left;
+    padding: .5rem .7rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: rgb(88, 96, 105);
+    font-size: .9rem;
+  }
+
+  .user__status i{
+    margin-right: .5rem;
+  }
+
+  
 }
 /* Repository column styles */
 
@@ -406,13 +429,13 @@ button {
 }
 
 .repo__description{
- color: rgb(88 96 105);
+ color: rgb(88, 96, 105);
 }
 
 .repo__metadata {
 	padding-top: 1rem;
   font-size: .8rem;
-  color: rgb(88 96 105);
+  color: rgb(88, 96, 105);
 }
 
 .repo__star-count,
@@ -434,9 +457,8 @@ button {
 
 .repo__content {
 	flex-basis: 75%;
+  padding-right: .7rem;
 }
-
-
 
 .repo__btn-container {
 	display: flex;

@@ -1,7 +1,3 @@
-import { options } from "./query.js";
-
-const url = "https://api.github.com/graphql";
-
 const getHtml = (selector) => document.querySelector(selector);
 
 const convertToReadableDate = (isoString) => {
@@ -21,7 +17,7 @@ const convertToReadableDate = (isoString) => {
 	];
 
 	const date = new Date(isoString);
-	return `${date.getDay()} ${monthNames[date.getMonth()]}`;
+	return `${date.getDate()} ${monthNames[date.getMonth()]}`;
 };
 
 const renderProfileShortcut = (url) => {
@@ -45,7 +41,7 @@ const renderUserSection = ({ avatarUrl, name, login, bio, location }) => {
           </h1>
         </div>
       </div>
-      <button class="user__status"><i class="far fa-smile"></i></button>
+      <button class="user__status"><i class="far fa-smile"></i> Set status</button>
       <p class="user__bio">${bio}<p>
       <p class="user__location"><i class="fas fa-map-marker-alt"></i>${location}<p>
     </div>
@@ -121,7 +117,7 @@ const render = ({ data }) => {
   renderRepositories(repositories)
 };
 
-fetch(url, options)
+fetch('/profiledata')
 	.then((response) => response.json())
 	.then((data) => render(data))
 	.catch((err) => console.log(err));

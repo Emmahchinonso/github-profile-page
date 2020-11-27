@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const query = {
 	query: `{
       viewer {
@@ -37,14 +39,17 @@ const query = {
     }`,
 };
 
+const ACCESS_TOKEN = process.env.GITHUB_TOKEN;
+
 const body = JSON.stringify(query);
 
-export const options = {
+const options = {
 	method: "post",
 	headers: {
 		"Content-Type": "application/json",
-		Authorization: "bearer de5f7d3d03ee9a8fee75164d55e92ae032d39484",
+		Authorization: `bearer ${ACCESS_TOKEN}`,
 	},
 	body: body,
 };
 
+module.exports = options;
