@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 
 const query = {
 	query: `{
@@ -47,7 +47,7 @@ const options = {
 	method: "post",
 	headers: {
 		"Content-Type": "application/json",
-		Authorization: `bearer ${ACCESS_TOKEN}`,
+		Authorization: "bearer f20149cfcedcce601a7d80c0c2c82393c1bd5092",
 	},
 	body: body,
 };

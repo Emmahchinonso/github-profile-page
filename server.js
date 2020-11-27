@@ -3,6 +3,7 @@ const app = express();
 const options = require("./query");
 const url = "https://api.github.com/graphql";
 const fetch = require("node-fetch");
+require('dotenv').config()
 
 const PORT = process.env.PORT || 500;
 
@@ -14,7 +15,8 @@ app.get("/", (req, res) => {
 
 app.get("/profiledata", (request, response) => {
   fetch(url, options)
-    .then(res => response.json(res))
+    .then(res => res.json())
+    .then(json => response.json(json))
 })
 
 app.listen(PORT, () => {
