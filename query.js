@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const query = {
 	query: `{
       viewer {
@@ -39,17 +37,6 @@ const query = {
     }`,
 };
 
-const ACCESS_TOKEN = process.env.GITHUB_TOKEN;
 
-const body = JSON.stringify(query);
 
-const options = {
-	method: "post",
-	headers: {
-		"Content-Type": "application/json",
-		Authorization: "bearer f20149cfcedcce601a7d80c0c2c82393c1bd5092",
-	},
-	body: body,
-};
-
-module.exports = options;
+module.exports = query;
